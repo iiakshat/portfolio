@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "sf";
+  src: url("../fonts/SFPRODISPLAYREGULAR.OTF");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "sf";
+  src: url("../fonts/SFPRODISPLAYMEDIUM.OTF");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "sf";
+  src: url("../fonts/SFPRODISPLAYBOLD.OTF");
+  font-weight: 800;
+}
+
+body {
+    font-family: "sf", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: space-between;
+    margin: 0;
+    padding: 1% 15% 1% 14%;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+header ul {
+    font-weight: 700;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: space-between;
+    color: rgb(0, 0, 0, 0.4);
+}
+
+
+header ul li {
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+    
+  }
+
+header ul li:hover {
+    font-weight: 800;
+    color: #000000;
+  }
+
+header ul li:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 2px) 0 0 0; 
+    background: #25fe54;
+    scale: 0 1;
+    transition: .3s, translate 0s .3s;
+  }
+
+header ul:hover li:before {
+    scale: 1;
+  }
+  
+header ul li:hover:before {
+    translate: 0;
+    transition: .3s;
+  }
+
+header ul:hover li:has(~ li:hover):before {
+    translate: 100% 0;
+    transition: .2s .2s,scale 0s .4s;
+  }
+
+header ul:hover li:hover ~ li:before {
+    translate: -100% 0;
+    transition: .2s .2s,scale 0s .4s;
+  }
+  
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#projects {
+    color: #000000;
+}
+
+
+.homecontainer {
+
+    background: url("../images/bg.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #000000;
+    transition: all 0.5s ease-in;
+}
+
+
+.homecontainer h1 {
+    font-size: 60px;
+    font-weight: 800;
+    margin: 10px;
+}
+
+.homecontainer p {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0px;
+}
+
+#myprojects {
+    margin-top: 45px;
+    text-align: center;
+    width: 83%;
+    margin-left: 8%;
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 0.1em;
+}
+
+#myprojects h2 {
+  font-weight: 800;
+  text-align: center;
+  }
+  
+  #myprojects h2::before,
+  #myprojects h2::after {
+    background-color: #00000024;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+  
+  #myprojects h2::before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  
+  #myprojects h2::after {
+    left: 0.5rem;
+    margin-right: -50%;
+  }
+
+
+.project-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin:  4% 0 0 0;
+}
+
+
+#project {
+  position: relative;
+  height: 60vh;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#project img {
+  height: 60vh;
+  transition: 0.3s ease-in-out;
+}
+
+#project .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+#project:hover img {
+  transform: scale(1.1);
+}
+
+#project:hover .overlay {
+  opacity: 1;
+}
+
+#project .text-container {
+  position: relative;
+  bottom: -50%;
+  text-align: center;
+  color: white;
+  transition: bottom 0.5s ease;
+  padding: 5%;
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow: hidden;
+  white-space: normal; 
+  word-wrap: break-word;
+}
+
+#project:hover .text-container {
+  bottom: 0%;
+}
+
+.text-title {
+  font-size: 24px;
+  margin-bottom: 40px;
+
+}
+
+.text-description {
+  margin-top: 20px; 
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+footer ul {
+    display: flex;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  
+footer  ul li {
+    list-style: none;
+  }
+  
+footer ul li a {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+  }
+  
+  footer ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+  footer ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  footer ul li a:before {
+    content: "";
+    position: absolute;
+  }
+  
