@@ -1,3 +1,12 @@
+/* body {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+} */
+
+body.loaded {
+  opacity: 1;
+}
+
 @font-face {
   font-family: "sf";
   src: url("../fonts/SFPRODISPLAYREGULAR.OTF");
@@ -239,45 +248,100 @@ a {
 }
 
 
-footer ul {
-    display: flex;
-    position: absolute;
-    transform: translate(-50%, -50%);
+footer {
+  background: rgb(242, 242, 242);
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  padding-bottom: 1%;
+}
+
+
+footer h1 {
+  padding-top: 3%;
+  color: rgb(65, 163, 255);
+  font-weight: 800;
+  text-transform: uppercase;
   }
-  
-footer  ul li {
-    list-style: none;
-  }
-  
-footer ul li a {
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    text-align: center;
-    line-height: 40px;
-    font-size: 25px;
-    margin: 0 10px;
-    display: block;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid #fff;
-    z-index: 1;
-  }
-  
-  footer ul li a .icon {
-    position: relative;
-    color: #262626;
-    transition: .5s;
-    z-index: 3;
-  }
-  
-  footer ul li a:hover .icon {
-    color: #fff;
-    transform: rotateY(360deg);
-  }
-  
-  footer ul li a:before {
-    content: "";
-    position: absolute;
-  }
-  
+
+
+footer a {
+  color:#000000;
+  background: #ffffff;
+  border-radius:24px;
+  text-align:center;
+  text-decoration:none;
+  font-family:fontawesome;
+  position: relative;
+  display: inline-block;
+  width:40px;
+  height:28px;
+  padding-top:12px;
+  margin:0 2px;
+  -o-transition:all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+   -webkit-font-smoothing: antialiased;
+}
+
+
+footer a:hover {
+  color: white;
+  background: rgb(49, 154, 253);
+}
+
+
+footer a span {
+  color:#666;
+  position:absolute;
+  font-family:sans-serif;
+  bottom:0;
+  left:-25px;
+  right:-25px;
+  padding:5px 7px;
+  z-index:-1;
+  font-size:14px;
+  border-radius:2px;
+  background:#fff;
+  visibility:hidden;
+  opacity:0;
+  -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+footer a span:before {
+  content:'';
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position:absolute;
+  bottom:-5px;
+  left:40px;
+}
+
+
+footer a:hover span {
+  bottom:50px;
+  visibility:visible;
+  opacity:1;
+}
+
+
+footer a:nth-of-type(1):before {
+content:'\f09b';
+}
+footer a:nth-of-type(2):before {
+content:'\f0e1';
+}
+footer a:nth-of-type(3):before {
+content:'\f099';
+}
+footer a:nth-of-type(4):before {
+content:'\f16d';
+}
