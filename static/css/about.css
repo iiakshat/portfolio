@@ -1,0 +1,74 @@
+* {
+    font-family: "sf", sans-serif;
+}
+
+
+h3 {
+    font-weight: 800;
+}
+
+#about {
+    color: #000000;
+}
+
+#projects {
+    color: rgb(0, 0, 0, 0.4);
+}
+
+.about-section {
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: "sf";
+    font-weight: 500;
+    padding: 40px;
+}
+
+.about-text {
+    width: 60%;
+}
+
+.about-text h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: grey;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.about-text h1 {
+    font-weight: 800;
+    margin: 0;
+    font-size: 30px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-text a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.about-text a:hover {
+    text-decoration: underline;
+}
+
+.about-image {
+    margin-right: 10%;
+    width: 25%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
