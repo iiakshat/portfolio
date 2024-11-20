@@ -2,7 +2,6 @@
     font-family: "sf", sans-serif;
 }
 
-
 h3 {
     font-weight: 800;
 }
@@ -12,7 +11,7 @@ h3 {
 }
 
 #projects {
-    color: rgb(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .about-section {
@@ -20,7 +19,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    font-family: "sf";
+    font-family: "sf", sans-serif;
     font-weight: 500;
     padding: 40px;
 }
@@ -71,4 +70,111 @@ h3 {
     width: 100%;
     height: auto;
     display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 1% 5%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .homecontainer h1 {
+        font-size: 36px;
+    }
+
+    .homecontainer p {
+        font-size: 18px;
+    }
+
+    #projects {
+        font-size: 18px;
+    }
+
+    #myprojects {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #project {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #project img {
+        height: auto;
+        width: 100%;
+    }
+
+    #project .text-container {
+        padding: 5%;
+    }
+
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .about-image {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 1% 2%;
+    }
+
+    .homecontainer h1 {
+        font-size: 28px;
+    }
+
+    .homecontainer p {
+        font-size: 16px;
+    }
+
+    #projects {
+        font-size: 16px;
+    }
+
+    #myprojects {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    #project .text-title {
+        font-size: 20px;
+    }
+
+    #project .text-description {
+        font-size: 14px;
+    }
+
+    .about-text h2 {
+        font-size: 16px;
+    }
+
+    .about-text h1 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
 }
