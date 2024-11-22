@@ -20,6 +20,42 @@ h3 {
     padding: 40px;
 }
 
+.about-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .about-section.loaded {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+  }
+  
+  .about-text h2, .about-text h1, .about-text p {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .about-section.loaded .about-text h2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+  }
+  
+  .about-section.loaded .about-text h1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+  }
+  
+  .about-section.loaded .about-text p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.7s;
+  }
+  
 .about-text {
     width: 60%;
 }
