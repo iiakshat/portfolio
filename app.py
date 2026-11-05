@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, Response
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def about():
 
 @app.route('/googlea82ba51b2fe720e3.html')
 def google_verification():
-    return send_from_directory(app.root_path, 'googlea82ba51b2fe720e3.html')
+    return Response('google-site-verification: googlea82ba51b2fe720e3.html', mimetype='text/html')
 
 
 if __name__ == '__main__':
